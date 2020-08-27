@@ -2,6 +2,7 @@
   <dictionary name="acema">
     <words>
       <w>knex</w>
+      <w>knexfile</w>
     </words>
   </dictionary>
 </component>
