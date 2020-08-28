@@ -4,7 +4,7 @@ const db = require("../models/recipes");
 const router = express.Router();
 
 
-router.get("/",  async (req, res) => {
+router.get("/", async (req, res) => {
     try {
         const recipes = await db.getRecipes();
         res.status(200).json(recipes);
@@ -14,7 +14,7 @@ router.get("/",  async (req, res) => {
     }
 });
 
-router.get("/:id/shopping_list",  async (req, res) => {
+router.get("/:id/shopping_list", async (req, res) => {
     try {
         const shoppingList = await db.getShoppingList(req.params.id);
         res.status(200).json(shoppingList);
@@ -24,7 +24,7 @@ router.get("/:id/shopping_list",  async (req, res) => {
     }
 });
 
-router.get("/:id/shopping_instructions",  async (req, res) => {
+router.get("/:id/shopping_instructions", async (req, res) => {
     try {
         const instructions = await db.getInstructions(req.params.id);
         res.status(200).json(instructions);
